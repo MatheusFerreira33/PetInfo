@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>HomePage</title>
+</head>
+
+<body>
+    <header>
+        <img src="../../assets/img/logo.svg">
+        <ul>
+            <button data-modal-control="criar post">Criar publicação</button>
+            <li class="avatar"></li>
+        </ul>
+        <div class="logout">
+            <button class="out"></button>
+        </div>
+    </header>
+    <script type="module" src="./index.js"></script>
+
+    <section class="modals">
+        <section class="containerCriarPost" id="criar post">
+            <div class="modalContainer">
+                <div class="headerModal">
+                    <h1>Criando novo post</h1>
+                    <button data-modal-control="criar post" id="criar post">X</button>
+                </div>
+                <div class="mainModal">
+                    <form>
+                        <label for="titulo">Titulo do post</label><br>
+                        <input type="text" value="" id="titulo" placeholder="Digite o titulo aqui..."><br>
+                        <div class="tituloHide" class="alert">Preencha o titulo</div><br>
+
+                        <label for="conteudo">Conteúdo do post</label><br>
+                        <textarea id="conteudo" value="" placeholder="Desenvolva o conteudo do post aqui..."></textarea>
+                        <div class="conteudoHide" class="alert">Preencha o conteudo</div><br>
+
+                        <div class="buttonsModal">
+                            <button class="cancelar" data-modal-control="criar post">Cancelar</button>
+                            <button class="publicar" id="publicar" type="submit">Publicar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="containerAcessarPost" id="acessarPost">
+            <div class="modalAcessarPost">
+                <div class="headerModal">
+                </div>
+                <div class="mainModal">
+                </div>
+            </div>
+        </section>
+        <section class="containerEditarPost" id="editarPost">
+            <div class="modalEditarPost">
+                <div class="headerModal">
+                </div>
+                <div class="mainModal">
+                </div>
+            </div>
+        </section>
+        <section class="containerExcluirPost" id="excluirPost">
+            <div class="modalExcluirPost">
+                <ul>
+                    <li>Confirmação de exclusão</li>
+                    <button>X</button>
+                </ul>
+                <div class="mainModal">
+                    <h1>Tem certeza que deseja excluir este post?</h1>
+                    <p>Essa ação não poderá ser desfeita, então pedimos
+                        que tenha cautela antes de concluir
+                    </p>
+                    <button class="cancelar">Cancelar</button>
+                    <button class="deletar">Sim,excluir este post</button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <main>
+        <ul>
+            <h3>Feed</h3>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
